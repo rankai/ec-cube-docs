@@ -1,16 +1,10 @@
-# EC-CUBE3開発ドキュメント
+# EC-CUBE 3 开发文档
 
-github page of the [http://ec-cube.github.io/](http://ec-cube.github.io/)
+github page of the [https://github.com/rankai/ec-cube-docs](https://github.com/rankai/ec-cube-docs)
 
-EC-CUBE3 の仕様や手順、開発Tipsに関するドキュメントを掲載しています。
-修正や追記、新規ドキュメントの作成をいただく場合、本レポジトリへPullRequestをお送りください。
+本项目是 EC-CUBE 3 开发文档的中文翻译版，包括程序说明文档、开发指南、开发和调试 tips等内容，方便大家学习和研究 EC-CUBE，日本第一的电商网站系统。发现翻译错误？想参与编辑？fork 此站点并提交 Pull Request！
 
-github pageはjekyllを使っています。
-windows環境の方は以下のURLを参考に環境を作成してください。
-<a href="http://qiita.com/chihiro-adachi/items/99a82c902b4c8467aa4c" target="_blank">http://qiita.com/chihiro-adachi/items/99a82c902b4c8467aa4c</a>
+其他语言版本：
+日文版 [https://github.com/rankai/ec-cube-docs](http://ec-cube.github.io/)
 
-### 開発協力に関して
-
-コードの提供・追加、修正・変更その他「EC-CUBE」への開発の御協力（Issue投稿、PullRequest投稿など、GitHub上での活動）を行っていただく場合には、
-[EC-CUBEのコピーライトポリシー](https://github.com/EC-CUBE/ec-cube/blob/50de4ac511ab5a5577c046b61754d98be96aa328/LICENSE.txt)をご理解いただき、ご了承いただく必要がございます。
-PullRequestを送信する際は、EC-CUBEのコピーライトポリシーに同意したものとみなします。
+[EC-CUBE 的版权说明](https://github.com/EC-CUBE/ec-cube/blob/50de4ac511ab5a5577c046b61754d98be96aa328/LICENSE.txt)
