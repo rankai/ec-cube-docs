@@ -1,47 +1,45 @@
 ---
 layout: default
-title: アップデート方法
+title: 如何升级
 ---
 
 ---
 
-# アップデート方法
+# 升级方法
 
-EC-CUBE3.0.2から導入されたマイグレーションを利用したバージョンアップの方法を解説します
+从 EC-CUBE 3.0.2 起，通过 [migration](/development/migration.html) 方法进行升级。
 
-開発時のマイグレーションの用意に関しては[マイグレーションガイド](/development/migration.html)をご参考ください
+## 步骤
 
-## 手順
-
-- 以下のディレクトリを上書きする
+- 覆盖以下目录
     - src/
     - html/
     - vendor/
-+ `http://インストール先/install.php/migration`にアクセスしマイグレーションを実行
-+ `html/install.php`を削除
++ 访问 `http://{your-url}/install.php/migration` 执行升级
++ 最后删除 `html/install.php`
 
 ## 注意事項
 
-### venderの更新について
+### Vendor 更新
 
-* composer.jsonに変更がない場合vendor/の上書きは不要です
-* composerが利用可能な環境の場合vendorの上書きではなく以下でも可能です
+* 如果有 composer.json 文件的话，不推荐通过覆盖 vendor 目录进行更新
+* 如果系统没有安装 composer，可以直接覆盖 vendor 目录进行更新
 
 ```
 > php composer.phar self-update
 ```
 
-### htmlおよびappディレクトリ以下が更新された場合
+### 更新 html 和 app 目录下的文件
 
-* `html`や`app`ディレクトリ以下が更新された場合、各ファイルの差分を反映頂く必要があります。
-* `各バージョンでの変更差分` を参考に、差分を適用してください。
+* 如果对`html` 和 `app` 目录下的文件进行过二次开发，要对比新版本和当前版本之间的差异，手动进行合并。
+* 合并时，请先阅读 `版本升级历史`。
 
-### テンプレートをカスタマイズしている場合 
+### 更新模板文件 
 
-* テンプレートのカスタマイズを行っている場合は、`src/Eccube/Resource/template` の変更差分をご確認下さい。
-* `各バージョンでの変更差分` を参考に、差分を適用してください。
+* 如果对 `src/Eccube/Resource/template` 目录下的模板文件进行过定制，要对比新版本和 当前版本之间的差异，手动进行合并。
+* 合并时，请先阅读 `版本升级历史`。
 
-## 各バージョンでの変更差分
+## 版本升级历史
 
 ### 3.0.2→3.0.3
 
@@ -58,7 +56,7 @@ https://github.com/EC-CUBE/ec-cube/compare/3.0.4...3.0.5
 ### 3.0.5→3.0.6
 
 https://github.com/EC-CUBE/ec-cube/compare/3.0.5...3.0.6  
-・今回は `autoload.php` も変更対象になっておりますのでご注意ください。
+当前升级变更了  `autoload.php` 文件，请留意。
 
 ### 3.0.6→3.0.7
 
