@@ -1,58 +1,58 @@
 ---
 layout: default
-title: インストール方法
+title: 如何安装
 ---
 
 ---
 
-# インストール方法
+# 安装方法
 
-## 事前準備
+## 前提
 
-- 予めMySQLもしくはPostgreSQLでデータベースを作成しておいて下さい。
-- htmlのフォルダが、DocumentRootとなるように設置してください
-- htmlがDocumentRootでない場合は、http://{DocumentRoot}/{htmlへのパス} となります。
+- 创建 MySQL/PostgreSQL 数据库（为避免在中文环境下出现乱码，须使用 utf8 作为字符集和排序的默认编码，通过以下命令创建数据库 `CREATE DATABASE eccube3_db DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci`）。
+- 设置网站根目录为 html 文件夹。
+- 如果 html 文件夹不是网站根目录，需要通过 http://{your-url}/{path-to-html-folder}/ 地址进行访问。
 
-## インストール方法
+## 安装方法
 
-EC-CUBEのインストールは、以下の2種類の方法があります。
+EC-CUBE提供了两者安装方式。
 
-- シェルスクリプトインストーラー
-- Webインストーラー
+- 脚本安装
+- Web安装
 
-## シェルスクリプトインストーラーを利用したインストール方法
+## 脚本安装方法
 
-`eccube_install.sh`の51行目付近、Configuration以下の設定内容を、環境に応じて修正し、実行してください。
+`eccube_install.sh` 82-105行定义了数据库的连接参数，可以根据实际情况进行更改。
 
-- PostgreSQLの場合
+- 使用PostgreSQL
 
 ```
 eccube_install.sh pgsql
 ```
 
-- MySQLの場合
+- 使用MySQL
 
 ```
 eccube_install.sh mysql
 ```
 
-インストール完了後、 `http://{インストール先URL}/admin`にアクセス
-EC-CUBEの管理ログイン画面が表示されればインストール成功です。以下のID/Passwordにてログインしてください。
+脚本执行完毕后，访问 `http://{your-url}/admin`，如果显示 EC-CUBE 后台登录页面则表示安装成功。默认的管理员账号和密码为：
 
-`ID: admin PW: password`
+`ID: admin`
+`PW: password`
 
-## Webインストーラーを利用したインストール方法
+## Web安装方法
 
-- composerを利用して外部ライブラリをインスールする
+- 安装 composer 和依赖
 
 ```
 curl -sS https://getcomposer.org/installer | php
 php ./composer.phar install --dev --no-interaction
 ```
 
-- Webインストーラーにアクセスする
+- Web安装
 
-`http://{インストール先URL}/install/`にアクセスし、表示されるインストーラーの指示にしたがってインスールしてください。
+访问 `http://{your-url}/install/`，按照指示完成安装。
 
 
 
